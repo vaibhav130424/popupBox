@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button and Info Box</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+}
+
+.center-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.info-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgb(198, 71, 71);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.center-btn:active + .info-box {
+    display: block;
+}
+
+.center-btn:active {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="center-btn">Click Me</button>
+        <div class="info-box">This is info</div>
+    </div>
+</body>
+</html>
